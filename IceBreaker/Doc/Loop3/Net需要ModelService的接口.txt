@@ -1,0 +1,18 @@
+Net收到服务器返回信息后需要调用的ModelService接口
+
+注：记得调用ClientSocket的setModel方法。
+
+1.	登陆验证结果处理（之前写过）param.(boolean)是否验证成功
+2.	注册验证结果 param.(boolean)是否验证成功
+3.	返回个人信息 param.(InfoVO)包括基本个人信息
+4.	返回我的道具 param.(ArrayList<ToolVO>)
+5.	是否打破个人记录 param.(boolean)
+6.	是否升级 param.(boolean)
+7.	协作邀请 param.(string id)邀请玩家的id
+8.	pk邀请 param.同上
+9.	开始协作游戏 param.null
+10.	开始pk游戏 param.null
+11.	消除请求结果（向服务器请求消除时需要验证码，第一步为1）param.(boolean)
+12.	同步消除（协作方消除的时候使搭档同步消除，服务器转发消除请求）param.(另一方传给服务器的操作)
+13.	返回排行榜 param.(ArrayList<ScoreVO>)
+14.	返回在线好友 param.(ArrayList<String>)

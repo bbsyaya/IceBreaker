@@ -1,0 +1,32 @@
+BoardModel提供的接口
+
+BoardModel{
+	
+	
+	//单人模式构造函数
+	//mode=1
+	//direction为游戏中方块下落方向，0表示从上向下，1表示从左向右
+	//character表示人物，1为Anna，2为Kristoff，3为Sven，4为Elsa
+	//toolC,toolD,toolE表示是否使用道具CDE，CDE道具只对单人模式有用
+	public BoardModel(int mode,int direction,int character,boolean toolC,boolean toolD,boolean toolE)
+	
+	
+	//协作或者对战模式构造函数
+	//mode=2或3
+	//direction为游戏中方块下落方向，0表示从上向下，1表示从左向右
+	//player2表示对方玩家
+	
+	public BoardModel(int mode,int direction,AccountVO player2){
+	
+	
+	//判断两个位置是否可以进行交换，如果可以非协作模式就进行交换，协作模式会向服务器发送请求
+	//协作模式下并不是真正改变盘面，改变盘面会等服务器回应后
+	
+	public boolean trySwap(PositionVO p1,PositionVO p2)
+	
+	
+	//对道具A，B的单独消除
+	//如果该坐标不是道具返回false
+	
+	public boolean useToolGrid(PositionVO p)
+}

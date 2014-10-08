@@ -1,0 +1,12 @@
+﻿BoardModel需要ViewService的接口
+
+1	界面变为等待对方玩家同意的界面的函数
+2	界面变为游戏主界面的函数
+3	游戏9*9盘面的生成函数，参数为int[9][9],数值1~6代表六种方块
+4	界面左侧显示人物的函数，参数为int，1为Anna，2为Kristoff，3为Sven，4为Elsa
+5	界面左侧计时器数字改变函数，参数为int，单位为秒
+6	界面左侧连击计数器数值改变函数，参数为int
+7	界面左侧积分计数器数值改变函数，参数为int
+8	盘面上指定两个相邻位置方块交换位置函数，参数为PositionVO p1,PositionVO p2
+9	盘面指定一部分方块消失的函数，参数为ArrayList<PositionVO>
+10	盘面上多个方块移动到其他位置的函数，参数为ArrayList<MoveandCreateActionVO>(MoveandCreateActionVO比较复杂，看注释)
